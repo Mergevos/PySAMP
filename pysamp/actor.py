@@ -7,6 +7,7 @@ from pysamp import (
     get_actor_health,
     get_actor_pos,
     get_actor_virtual_world,
+    get_actor_skin,
     is_actor_invulnerable,
     is_actor_streamed_in,
     is_valid_actor,
@@ -15,6 +16,7 @@ from pysamp import (
     set_actor_invulnerable,
     set_actor_pos,
     set_actor_virtual_world,
+    set_actor_skin
 )
 from typing import Optional, Tuple
 from pysamp.event import event
@@ -138,6 +140,14 @@ class Actor:
     def is_valid(self) -> bool:
         """Check if the actor is valid."""
         return is_valid_actor(self.id)
+    
+    def set_skin(self, skinid: int) -> bool:
+        """Sets the actor skin."""
+        return set_actor_skin(self.id, skinid)
+    
+    def get_skin(self) -> int:
+        """Gets the actor skin."""
+        return get_actor_skin(self.id)
 
     @event("OnActorStreamIn")
     def on_stream_in(cls, actor_id: int, for_player_id: int):

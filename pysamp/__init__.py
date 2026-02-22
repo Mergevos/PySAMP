@@ -97,6 +97,7 @@ from samp import (
     GetActorPoolSize,
     GetActorPos,
     GetActorVirtualWorld,
+    GetActorSkin,
     GetAnimationName,
     GetConsoleVarAsBool,
     GetConsoleVarAsInt,
@@ -284,6 +285,7 @@ from samp import (
     SetActorInvulnerable,
     SetActorPos,
     SetActorVirtualWorld,
+    SetActorSkin,
     SetCameraBehindPlayer,
     SetDeathDropAmount,
     SetGameModeText,
@@ -2572,6 +2574,14 @@ def set_actor_virtual_world(actorid: int, vworld: int) -> bool:
 
 def get_actor_virtual_world(actorid: int) -> int:
     return GetActorVirtualWorld(actorid)
+
+
+def set_actor_skin(actorid: int, skinid: int) -> bool:
+    return SetActorSkin(actorid, skinid)
+
+
+def get_actor_skin(actorid: int) -> int:
+    return GetActorSkin(actorid)
 
 
 def apply_actor_animation(
