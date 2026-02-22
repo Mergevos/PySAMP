@@ -1896,6 +1896,11 @@ def DestroyActor(actorid: int) -> bool:
 def IsActorStreamedIn(actorid: int, forplayer_id: int) -> bool:
     pass
 
+def SetActorSkin(actorid: int, skinid: int) -> bool:
+    pass
+
+def GetActorSkin(actorid: int) -> int:
+    pass
 
 def SetActorVirtualWorld(actorid: int, vworld: int) -> bool:
     pass
